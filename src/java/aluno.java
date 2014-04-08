@@ -8,7 +8,7 @@ private Float n1;
 private Float n2;
 private Float n3;
 private Float n4;
-
+private String resultado;
 
     public String getNome() {
         return nome;
@@ -52,8 +52,27 @@ private Float n4;
     public Float calculaMedia(){
     Float media;
     media=(n1+n2+n3+n4)/4;
-        
+    
+  
     return media;
     
+    }
+    public String calculaResultado(){
+        Float media;
+        media=(n1+n2+n3+n4)/4;
+        
+        if(media < 3.5){
+        resultado="Reprovado";
+        }else{
+        if(media < 6){
+        resultado="Recuperação";
+        }
+        else{
+        resultado="Aprovado";
+        }
+    }
+
+        
+        return resultado;
     }
 }

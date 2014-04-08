@@ -9,7 +9,16 @@ import javax.faces.bean.ManagedBean;
 public class parte2Controller {
 
 private Float media;
+private String resultado;
 private aluno Aluno = new aluno();
+
+    public String getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
+    }
 
     public String getNome() {
         return Aluno.getNome();
@@ -57,6 +66,7 @@ private aluno Aluno = new aluno();
 
  public String confirmaAction(){
     media=Aluno.calculaMedia();
+    resultado=Aluno.calculaResultado();
     return "";
 }
 }
