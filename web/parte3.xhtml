@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Parte II 03</title>
+    </h:head>
+    <h:body>
+        <h:form>
+        
+        <h:outputLabel value="Nome: " /> 
+        <h:inputText value="#{pecaController.nome}" /> <br/>
+                   
+        <h:outputLabel value="Preço: R$" /> 
+        <h:inputText value="#{pecaController.preco}" />  <br/>
+        
+        <h:outputLabel value="Peso:            "     /> 
+        <h:inputText value="#{pecaController.peso}" /><h:outputLabel value="kg" /> <br/>
+
+        <h:outputLabel value="Descrição:                   " /> 
+        <h:inputText value="#{pecaController.descricao}" /> <br/>
+        <h:commandButton value="Calcular" action="#{pecaController.confirmaAction()}" /> <br/>
+                       
+        <h:outputLabel value="------------------------------------------------------------------------------------------------------------------------ " /> 
+<br/>
+        <h:outputText value="#{pecaController.nome} " /> <br/>                 
+        <h:outputText value="#{pecaController.descricao} " /> <br/>
+        <h:outputText value="Preço: R$" /> <h:outputText value="#{pecaController.preco} " /> <br/>
+        <h:outputText value="Peso(kg): " /> <h:outputText value="#{pecaController.peso} " /> <br/>
+        <h:outputText value="Imposto: R$ " /> <h:outputText value="#{pecaController.imposto} " /> <br/>
+        <h:outputText value="Frete: R$ " /> <h:outputText value="#{pecaController.frete} " />  <br/>
+        <br/>
+        <h:outputLabel value="------------------------------------------------------------------------------------------------------------------------ " /> 
+        </h:form>
+    </h:body>
+</html>
+
